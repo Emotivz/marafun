@@ -17,6 +17,7 @@ function App() {
           <Route path={"/login/student"} element={<StudentLogin />} />
           <Route path={"/login"} />
           <Route path={"/leaderBoard"} element={<LeaderBoard />} />
+          <Route path={"/profile/:studentId"} element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>
