@@ -3,7 +3,7 @@ import avatarURL from "../../assets/logos/Ellipse 12.png";
 import teamAvatarURL from "../../assets/logos/Ellipse 16.png";
 import scoreURL from "../../assets/logos/Ellipse 17.png";
 
-export default function ProfileInfo({ student }) {
+export default function ProfileInfo({ student, finalName }) {
   console.log(student);
   // data.find((student) => student.Unique_ID[])
   return (
@@ -13,7 +13,7 @@ export default function ProfileInfo({ student }) {
           <h1 className="profile-info__title">Profile</h1>
           <div className="container">
             <img className="profile-info__avatar" src={avatarURL} alt="" />
-            <h2 className="profile-info__avatar-text"> Fuzzy flame</h2>
+            <h2 className="profile-info__avatar-text">{finalName}</h2>
           </div>
 
           <div className="container">

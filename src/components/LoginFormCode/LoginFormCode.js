@@ -6,12 +6,12 @@ const LoginFormCode = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    navigate("/chooseavatar");
+    navigate(`/chooseavatar/${e.target.code.value}`);
   };
 
   return (
     <section className="login-form-code">
-      <form className="login-form-code__form">
+      <form onSubmit={(e) => handleClick(e)} className="login-form-code__form">
         <div className="login-form-code__input-container">
           <label className="login-form-code__label" htmlFor="code">
             Enter code
@@ -24,9 +24,7 @@ const LoginFormCode = () => {
           />
         </div>
         <div className="login-form-code__button-container">
-          <button onClick={handleClick} className="login-form-code__button">
-            Enter
-          </button>
+          <button className="login-form-code__button">Enter</button>
         </div>
       </form>
     </section>

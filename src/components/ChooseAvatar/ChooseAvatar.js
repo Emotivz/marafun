@@ -2,14 +2,14 @@ import "./ChooseAvatar.scss";
 import animalIconURL from "../../assets/logos/Ellipse 12.png";
 import backgroundURL from "../../assets/icons/maxresdefault.jpg";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const randomNames = ["Name1", "Name2", "Name3"];
 
-export default function ChooseAvatar() {
+export default function ChooseAvatar({ setFinalName }) {
   const [inputName, setInputName] = useState("");
-  const [finalName, setFinalName] = useState("");
   const [finalBackground, setFinalBackground] = useState("");
+  const { studentId } = useParams();
 
   const navigate = useNavigate();
 
@@ -25,10 +25,7 @@ export default function ChooseAvatar() {
   const handleSaveName = (e) => {
     e.preventDefault();
     setFinalName(inputName);
-  };
-
-  const handleAddBackground = (e) => {
-    setFinalBackground(e.target.src);
+    navigate(`/profile/${studentId}`);
   };
 
   return (
@@ -65,71 +62,6 @@ export default function ChooseAvatar() {
             save name
           </button>
         </form>
-
-        <div className="choose-section__backgrounds-container">
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-          <img
-            onClick={(e) => handleAddBackground(e)}
-            className="choose-section__background"
-            src={backgroundURL}
-            alt=""
-          />
-        </div>
-
-        <button onClick={() => navigate("/profile")}>save changes</button>
       </section>
     </>
   );
