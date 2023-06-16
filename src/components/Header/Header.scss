@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+  background-color: $primary-background-colour;
+  border-bottom: 1px solid $black;
+  &__logo-wrapper {
+    display: flex;
+    justify-content: left;
+  }
+  &__logo {
+    padding: 4rem 2.4rem;
+  }
+}
