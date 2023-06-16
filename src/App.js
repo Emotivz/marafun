@@ -1,6 +1,7 @@
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Login from "./pages/Login";
+import LeaderBoard from "./pages/LeaderBoard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route to={"/"} />
-          <Route to={"/login"} />
+          <Route path={"/"} />
+          <Route path={"/login"} />
+          <Route path={"/leaderBoard"} element={<LeaderBoard/>}/>
         </Routes>
       </BrowserRouter>
       <Login />
