@@ -3,18 +3,20 @@ import ChooseAvatar from "./components/ChooseAvatar/ChooseAvatar";
 import Header from "./components/Header/Header";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile/Profile";
+import StudentLogin from "./pages/StudentLogin";
+import LeaderBoard from "./pages/LeaderBoard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Header /> */}
         <Routes>
-          <Route path={"/"} element={<Login />} />
+          <Route path={"/"} />
           <Route path={"/login"} element={<Login />} />
-          <Route path={"/chooseavatar"} element={<ChooseAvatar />} />
-          <Route path={"/profile/:studentId"} element={<Profile />} />
+          <Route path={"/login/student"} element={<StudentLogin />} />
+          <Route path={"/login"} />
+          <Route path={"/leaderBoard"} element={<LeaderBoard />} />
         </Routes>
       </BrowserRouter>
     </div>
