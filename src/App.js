@@ -1,6 +1,7 @@
 import "./App.scss";
 import ChooseAvatar from "./components/ChooseAvatar/ChooseAvatar";
 import Login from "./pages/Login";
+import LandingPage from "./pages/LandingPage";
 import Profile from "./pages/Profile/Profile";
 import StudentLogin from "./pages/StudentLogin";
 import LeaderBoard from "./pages/LeaderBoard/LeaderBoard";
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path={"/"} />
+          <Route path={"/"} element={<LandingPage />} />
           <Route path={"/login"} element={<Login />} />
           <Route path={"/login/student"} element={<StudentLogin />} />
           <Route path={"/login"} />
