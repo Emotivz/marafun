@@ -1,0 +1,18 @@
+.choose-section {
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+
+  &__title {
+  }
+
+  &__avatars-container {
+  }
+
+  &__avatar {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+}
