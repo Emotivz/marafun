@@ -1,18 +1,32 @@
 .choose-section {
-  overflow: auto;
-  white-space: nowrap;
-  display: flex;
-
+  text-align: center;
   &__title {
   }
 
   &__avatars-container {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
   }
 
   &__avatar {
     display: inline-block;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
+    padding: 2rem;
     border-radius: 50%;
+  }
+
+  &__backgrounds-container {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+  }
+
+  &__background {
+    display: inline-block;
+    width: 20rem;
+    height: 15rem;
+    padding: 2rem;
   }
 }
