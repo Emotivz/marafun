@@ -1,5 +1,5 @@
 import "./ChooseAvatar.scss";
-import animalIconURL from "../../assets/icons/koala-cartoon-fox-avatar-png-favpng-v7ir0MbUDz8DRDmVVX4Zz1EEU.jpg";
+import animalIconURL from "../../assets/logos/Ellipse 12.png";
 import backgroundURL from "../../assets/icons/maxresdefault.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,17 +48,22 @@ export default function ChooseAvatar() {
           <img className="choose-section__avatar" src={animalIconURL} alt="" />
         </div>
 
-        <h2>Enter your name</h2>
-        <form>
+        <h2 className="enter-name">Enter your name</h2>
+        <form className="form">
           <input
+            className="input"
             type="text"
             id="name"
             name="name"
             onChange={(e) => handleInputChange(e)}
             defaultValue={inputName}
           />
-          <button onClick={(e) => handleRandom(e)}>Generate random name</button>
-          <button onClick={(e) => handleSaveName(e)}>save name</button>
+          <button className="button" onClick={(e) => handleRandom(e)}>
+            Generate random name
+          </button>
+          <button className="button" onClick={(e) => handleSaveName(e)}>
+            save name
+          </button>
         </form>
 
         <div className="choose-section__backgrounds-container">
