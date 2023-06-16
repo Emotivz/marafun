@@ -1,0 +1,47 @@
+@use "../../styles//partials/variables" as *;
+
+.login-form-code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 46rem;
+  &__input {
+    padding: 3rem;
+    font-size: 2rem;
+    padding: 1.6rem;
+    font-weight: 600;
+    border: 1px solid $black;
+    border-radius: 10px;
+    // margin: 2.4rem;
+    width: 236px;
+  }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14.5rem;
+  }
+  &__button {
+    padding: 3rem;
+    font-size: 2rem;
+    padding: 1.6rem;
+    font-weight: 600;
+    // border: 2px solid $secondary-button-colour;
+    border-radius: 10px;
+    margin-bottom: 10rem;
+    width: 236px;
+    background-color: $primary-button-colour;
+    color: $primary-background-colour;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $hover-button-colour;
+      //   color: $black;
+    }
+  }
+  &__label {
+    margin-bottom: 0.7rem;
+    margin-top: 5rem;
+  }
+}
