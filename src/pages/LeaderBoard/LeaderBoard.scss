@@ -1,0 +1,11 @@
+main{
+    display: flex;
+}
+
+
+.activity {
+    &__title {
+        color: #e41165;
+        font-size: 2.5rem;
+      }
+}

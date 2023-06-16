@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile/Profile";
 import StudentLogin from "./pages/StudentLogin";
-import LeaderBoard from "./pages/LeaderBoard";
+import LeaderBoard from "./pages/LeaderBoard/LeaderBoard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
