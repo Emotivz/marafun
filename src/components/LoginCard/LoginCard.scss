@@ -27,9 +27,16 @@
     font-size: 2rem;
     padding: 1.6rem;
     font-weight: 600;
-    border: 1px solid $black;
+    color: $white;
+    background-color: $primary-button-colour;
+    border: 1px solid $primary-button-colour;
     border-radius: 10px;
     margin: 2.4rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $hover-button-colour;
+      //   color: $black;
+    }
   }
   &__role {
     text-transform: capitalize;

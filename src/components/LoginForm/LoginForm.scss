@@ -1,0 +1,20 @@
+@use "../../styles//partials/variables" as *;
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 46rem;
+  border-right: 2px solid $black;
+}
+
+.login-form-page-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-form__title {
+  text-align: center;
+}

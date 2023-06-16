@@ -1,0 +1,20 @@
+@use "../styles/partials/variables" as *;
+
+.component-container {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 92rem;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+
+.student-login__title {
+  text-align: center;
+  font-size: 5rem;
+  margin: 8rem 2rem 5rem 2rem;
+}
+
+.whole-student-login-page {
+  background-color: $primary-background-colour;
+}

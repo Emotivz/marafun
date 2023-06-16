@@ -23,7 +23,11 @@ const LoginFormCode = () => {
             className="login-form-code__input"
           />
         </div>
-        <button onClick={handleClick}>Enter</button>
+        <div className="login-form-code__button-container">
+          <button onClick={handleClick} className="login-form-code__button">
+            Enter
+          </button>
+        </div>
       </form>
     </section>
   );
