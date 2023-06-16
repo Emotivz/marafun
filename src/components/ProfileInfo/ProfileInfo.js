@@ -3,7 +3,9 @@ import avatarURL from "../../assets/logos/Ellipse 12.png";
 import teamAvatarURL from "../../assets/logos/Ellipse 16.png";
 import scoreURL from "../../assets/logos/Ellipse 17.png";
 
-export default function ProfileInfo() {
+export default function ProfileInfo({ student }) {
+  console.log(student);
+  // data.find((student) => student.Unique_ID[])
   return (
     <>
       <section className="profile">
@@ -21,14 +23,14 @@ export default function ProfileInfo() {
               alt=""
             />
             <p className="profile-info__team-avatar-text">
-              You're on the <b>Crocodile Team</b>
+              You're on the <b>{student.Team}</b>
             </p>
           </div>
 
           <div className="container">
             <img className="profile-info__score-icon" src={scoreURL} alt="" />
             <p className="profile-info__score-icon-text">
-              Your score is <b>113</b>
+              Your score is <b>{student.Accumulative_Points}</b>
             </p>
           </div>
         </section>
