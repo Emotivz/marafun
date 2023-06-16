@@ -25,7 +25,7 @@ export default function ChooseAvatar({ setFinalName }) {
   const handleSaveName = (e) => {
     e.preventDefault();
     setFinalName(inputName);
-    navigate(`/profile/${studentId}`);
+    navigate(`/${studentId}/leaderboard`);
   };
 
   return (

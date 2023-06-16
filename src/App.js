@@ -18,7 +18,10 @@ function App() {
           <Route path={"/login"} element={<Login />} />
           <Route path={"/login/student"} element={<StudentLogin />} />
           <Route path={"/login"} />
-          <Route path={"/leaderBoard"} element={<LeaderBoard finalName={finalName}/>} />
+          <Route
+            path={":studentId/leaderBoard"}
+            element={<LeaderBoard finalName={finalName} />}
+          />
           <Route
             path={"/chooseavatar/:studentId"}
             element={<ChooseAvatar setFinalName={setFinalName} />}
