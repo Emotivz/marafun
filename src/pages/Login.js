@@ -6,14 +6,14 @@ const Login = () => {
   return (
     <>
       <Header />
-      <h1 className="login__title">Login</h1>
+      {/* <h1 className="login__title">Login</h1> */}
       <LoginCard
         icon={StudentIcon}
         role={"student"}
         info1={"Pick an avatar, and monitor"}
         info2={"your team’s rankings!"}
       />
-      <LoginCard />
+      {/* <LoginCard /> */}
     </>
   );
 };
