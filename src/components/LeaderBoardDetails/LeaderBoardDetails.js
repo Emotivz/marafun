@@ -15,10 +15,16 @@ const LeaderBoardDetails = ({ userData }) => {
     sortedData.slice(0, 3)[2],
   ];
 
+  const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
+    console.log(value);
+    console.log(showData);
+    return <text x={x + width / 2} y={y} fill="#ffffff" textAnchor="middle" dy={15}>{`points: ${value}`}</text>;
+  };
+
   return (
     <section className="leaderboard__details">
-      <BarChart width={600} height={300} data={showData}>
-        <Bar dataKey="Accumulative_Points" fill="#E94184" />
+      <BarChart width={600} height={360} data={showData}>
+        <Bar dataKey="Accumulative_Points" fill="#E94184" label={renderCustomBarLabel}/>
       </BarChart>
       <section className="leaderboard">
         <div className="leaderboard__titles">
